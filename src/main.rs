@@ -1,4 +1,3 @@
-use rand::Rng;
 use std::io;
 
 fn main() {
@@ -122,12 +121,6 @@ fn total(input_array: &[u8; 5]) -> u8 {
         }
         counter += 1;
     }
-}
-
-fn decrement_random(input_array: &mut [u8; 5]) -> [u8; 5] {
-    let random_column = rand::thread_rng().gen_range(0..5);
-    input_array[random_column] -= 1;
-    *input_array
 }
 
 fn decrement_index(input_array: &mut [u8; 5], index: usize, decrement_amount: u8) -> [u8; 5] {
